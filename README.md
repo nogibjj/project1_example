@@ -16,7 +16,7 @@ databricks jobs list --output JSON | jq
 ## Access fastapi
 
 ```
-python ./fastapi-app.py
+python fastapi-app.py
 ```
 
 use the broswer to open the url and do the query. 
