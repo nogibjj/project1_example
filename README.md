@@ -1,24 +1,8 @@
-# assimilate-databricks
-A repo to assimilate databricks
+# project1-Yitong Wang
 
-## API Getting Started
-
-![databricks-api](https://user-images.githubusercontent.com/58792/189719737-fcdaf61f-93d2-415b-8eea-ebb96143187d.png)
-
-
-
-## Setup auth
-
-[databricks-python](https://docs.microsoft.com/en-us/azure/databricks/dev-tools/python-api)
-
-Place in Codespace secrets
-* [unix, linux, mac](https://docs.microsoft.com/en-us/azure/databricks/dev-tools/python-api#unixlinuxandmacos)
-
-```bash
-DATABRICKS_HOST
-DATABRICKS_TOKEN
-```
-
+## Introduction 
+This is my project1 repo 
+ 
 
 ## Test out CLI
 
@@ -27,37 +11,30 @@ databricks clusters list --output JSON | jq
 databricks fs ls dbfs:/
 databricks jobs list --output JSON | jq
 ```
-## Remote connect
-
-[databricks-connect](https://docs.databricks.com/dev-tools/databricks-connect.html)
-
-## Databricks SQL Connector
-
-[Setup table first!](https://docs.databricks.com/dbfs/databricks-datasets.html)
-
-[sql remote](https://docs.databricks.com/dev-tools/python-sql-connector.html)
-https://docs.databricks.com/integrations/bi/jdbc-odbc-bi.html#connection-details-cluster
 
 
-## Comparing to Dask
+## CLI Interface
 
-An alternative solution to Databricks is https://tutorial.dask.org/00_overview.html[Dask] or [Ray](https://docs.ray.io/en/latest/data/dask-on-ray.html).
+execute default query
+```
+python query.py cli-query
 
-### Distributed compute
+```
 
-* [Quickstart distributed compute example](https://distributed.dask.org/en/stable/quickstart.html)
-* [For Advanced users (HDFS wordcount Enron)](https://distributed.dask.org/en/stable/examples/word-count.html)
+enter the query statement to do the query we want
 
-### Hands on Enron
+```
+python query.py --query=<query statement>
 
-* [Download data](https://www.kaggle.com/datasets/wcukierski/enron-email-dataset) from Kaggle and upload by right-click on explorer in GitHub Codespaces
-* place in a "datasets" directory and add this directory to your `.gitignore`.  This ensures you don't check in a 1GB file to GitHub.
+```
 
-### Streamlit Example
 
-Enable enron...
 
-`streamlit hello --server.enableCORS=false`
-`streamlit run hello_streamlit_enron.py --server.enableCORS=false`
+## Access Fastapi
 
+```
+python fastapi-app.py
+```
+
+use the broswer to open the url and the message we want will displayed.
 
