@@ -13,10 +13,28 @@ databricks jobs list --output JSON | jq
 ```
 
 
-## Access fastapi
+## CLI Interface
+
+execute default query
+```
+python query.py cli-query
+
+```
+
+enter the query statement to do the query we want
+
+```
+python query.py --query=<query statement>
+
+```
+
+
+
+## Access Fastapi
 
 ```
 python fastapi-app.py
 ```
 
-use the broswer to open the url and do the query. 
+use the broswer to open the url and the message we want will displayed.
+
